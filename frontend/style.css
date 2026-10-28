@@ -1,0 +1,295 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2563eb;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-top: 10px;
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+.task-name {
+    flex: 1;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* LEVEL 2 STYLING */
+
+/* Arrange form fields vertically */
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Place priority and due date next to each other */
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row > * {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Dropdown styling */
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+}
+
+/* Search area */
+.search-section {
+    margin-top: 25px;
+}
+
+#searchInput {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Filter buttons */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.filter-section button {
+    background: #64748b;
+}
+
+.filter-section button.active {
+    background: #2563eb;
+}
+
+/* Task card */
+#taskList li {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Task title and buttons */
+.task-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-header .task-name {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+/* Priority and date */
+.task-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Priority label */
+.priority-badge {
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.priority-High {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.priority-Medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.priority-Low {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Buttons */
+.edit-btn {
+    background: #475569;
+}
+
+.edit-btn:hover {
+    background: #334155;
+}
+
+/* Edit form */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.cancel-btn {
+    background: #64748b;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .task-header {
+        flex-wrap: wrap;
+    }
+}
+
+/* LEVEL 3: AUTHENTICATION */
+
+/* Always hide sections marked as hidden */
+[hidden] {
+    display: none !important;
+}
+
+/* Login and registration form */
+#authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#authForm label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#authForm input {
+    padding: 12px;
+}
+
+/* Login / register message */
+#authMessage {
+    min-height: 20px;
+    text-align: center;
+    color: #dc2626;
+}
+
+/* Dashboard header */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+    text-align: left;
+}
+
+.dashboard-header p {
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* Logout button */
+#logoutButton {
+    background: #475569;
+}
+
+#logoutButton:hover {
+    background: #334155;
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
